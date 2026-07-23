@@ -1,8 +1,10 @@
 import { Partner } from "@/types";
 
 export const partnersData: Partner[] = [
-  { id: "p1", name: "Global Tech Corp", logoUrl: "/logos/global-tech.png" },
-  { id: "p2", name: "Apex Financial", logoUrl: "/logos/apex-fin.png" },
-  { id: "p3", name: "Innovate Retail", logoUrl: "/logos/innovate.png" },
-  { id: "p4", name: "NextGen Healthcare", logoUrl: "/logos/nextgen.png" },
+  { id: "reliance", name: "Reliance Industries Limited", logoUrl: "/images/partners/Reliance.png" },
+  { id: "hcl", name: "HCL", logoUrl: "/images/partners/HCL.png" },
+  { id: "ibm", name: "IBM", logoUrl: "/images/partners/IBM.png" },
+  { id: "crif", name: "CRIF", logoUrl: "/images/partners/CRIF.png" },
+  { id: "adp", name: "ADP", logoUrl: "/images/partners/ADP.png" },
+  { id: "bayer", name: "Bayer", logoUrl: "/images/partners/Bayer.png" },
 ];
