@@ -16,10 +16,9 @@ export const DESIGN_TOKENS = {
     height: "h-16",
     mobileHeight: "h-14",
   },
-  colors: {
-    primary: "bg-blue-600 text-white hover:bg-blue-700",
-    secondary: "bg-slate-100 text-slate-900 hover:bg-slate-200",
-    outline: "border border-slate-200 text-slate-700 hover:bg-slate-50",
+  zIndex: {
+    navbar: "z-50",
+    modal: "z-100",
   }
 };
 
