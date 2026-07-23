@@ -8,3 +8,4 @@ export * from './testimonial';
 export * from './faq';
 export * from './process';
 export * from './framework';
+export * from './audience';
