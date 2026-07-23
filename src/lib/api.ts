@@ -14,14 +14,6 @@ export async function getStats(): Promise<Statistic[]> {
   return res.json();
 }
 
-export async function getTestimonials(): Promise<Testimonial[]> {
-  const res = await fetch(`${getBaseUrl()}/api/testimonials`, {
-    next: { revalidate: 3600 },
-  });
-  if (!res.ok) throw new Error("Failed to fetch testimonials");
-  return res.json();
-}
-
 export async function getFaqs(): Promise<FAQCategory[]> {
   const res = await fetch(`${getBaseUrl()}/api/faqs`, {
     next: { revalidate: 3600 },

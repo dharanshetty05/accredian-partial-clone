@@ -5,8 +5,8 @@ import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Card } from "@/components/ui/Card";
-import { testimonials } from "@/lib/data/testimonials";
 import { cn } from "@/lib/utils";
+import { testimonials } from "@/lib/data/testimonials";
 
 export function Testimonials() {
   const [currentPage, setCurrentPage] = useState(0);
@@ -26,10 +26,10 @@ export function Testimonials() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const totalPages = Math.ceil(testimonials.length / itemsPerPage);
+  const totalPages = Math.ceil((testimonials?.length || 0) / itemsPerPage);
 
   useEffect(() => {
-    if (currentPage >= totalPages) {
+    if (currentPage >= totalPages && totalPages > 0) {
       setCurrentPage(Math.max(0, totalPages - 1));
     }
   }, [totalPages, currentPage]);

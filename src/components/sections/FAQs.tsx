@@ -1,17 +1,31 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
-import { faqsData } from "@/lib/data/faqs";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
+import { FAQCategory } from "@/types";
 
-export function FAQs() {
-  const [activeCategory, setActiveCategory] = useState<string>(faqsData[0].category);
+interface FAQsProps {
+  faqsData: FAQCategory[];
+}
+
+export function FAQs({ faqsData }: FAQsProps) {
+  const [activeCategory, setActiveCategory] = useState<string>("");
+
+  useEffect(() => {
+    if (faqsData && faqsData.length > 0 && !activeCategory) {
+      setActiveCategory(faqsData[0].category);
+    }
+  }, [faqsData, activeCategory]);
   
-  const currentCategoryData = faqsData.find(c => c.category === activeCategory) || faqsData[0];
+  const currentCategoryData = faqsData?.find(c => c.category === activeCategory) || faqsData?.[0];
+
+  if (!faqsData || faqsData.length === 0) {
+    return null;
+  }
 
   return (
     <section className="py-20 bg-white">
@@ -49,7 +63,7 @@ export function FAQs() {
 
           {/* Right Column - Accordion */}
           <div className="w-full md:w-2/3">
-            <FAQAccordion items={currentCategoryData.faqs} />
+            {currentCategoryData && <FAQAccordion items={currentCategoryData.faqs} />}
           </div>
         </div>
 
