@@ -1,7 +1,8 @@
+import { Navbar } from "@/components/layout/Navbar";
+
 export default function Home() {
   return (
-    <>
-      <h1>This is Accredian Partial Clone</h1>
-    </>
+    <main>
+    </main>
   );
 }
