@@ -1,4 +1,4 @@
-import { Statistic, Testimonial, FAQ } from "@/types";
+import { Statistic, Testimonial, FAQCategory } from "@/types";
 
 export function getBaseUrl() {
   if (typeof window !== "undefined") return ""; // Browser should use relative URL
@@ -22,7 +22,7 @@ export async function getTestimonials(): Promise<Testimonial[]> {
   return res.json();
 }
 
-export async function getFaqs(): Promise<FAQ[]> {
+export async function getFaqs(): Promise<FAQCategory[]> {
   const res = await fetch(`${getBaseUrl()}/api/faqs`, {
     next: { revalidate: 3600 },
   });
