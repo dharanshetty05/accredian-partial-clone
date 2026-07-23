@@ -50,9 +50,11 @@ export function MobileNav({ navigationData }: MobileNavProps) {
       document.addEventListener('keydown', handleTabKeyPress);
       firstElement?.focus();
 
+      const currentButton = buttonRef.current;
+
       return () => {
         document.removeEventListener('keydown', handleTabKeyPress);
-        buttonRef.current?.focus();
+        currentButton?.focus();
       };
     }
   }, [isOpen]);

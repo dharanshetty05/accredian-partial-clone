@@ -15,7 +15,7 @@ export function Partners() {
           }
           subtitle={
             <>
-              Successful Collaborations With the <span className="text-blue-600">Industry's Best</span>
+              Successful Collaborations With the <span className="text-blue-600">Industry&apos;s Best</span>
             </>
           }
         />

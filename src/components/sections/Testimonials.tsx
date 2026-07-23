@@ -27,12 +27,7 @@ export function Testimonials() {
   }, []);
 
   const totalPages = Math.ceil((testimonials?.length || 0) / itemsPerPage);
-
-  useEffect(() => {
-    if (currentPage >= totalPages && totalPages > 0) {
-      setCurrentPage(Math.max(0, totalPages - 1));
-    }
-  }, [totalPages, currentPage]);
+  const displayPage = totalPages > 0 ? Math.min(currentPage, totalPages - 1) : 0;
 
   return (
     <section className="py-16 md:py-24 bg-white overflow-hidden">
@@ -55,7 +50,7 @@ export function Testimonials() {
           <div className="overflow-hidden w-full">
             <div 
               className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${currentPage * 100}%)` }}
+              style={{ transform: `translateX(-${displayPage * 100}%)` }}
             >
               {Array.from({ length: totalPages }).map((_, pageIndex) => (
                 <div key={pageIndex} className="w-full flex-shrink-0 flex gap-4 sm:gap-6 px-1 py-1">
@@ -96,7 +91,7 @@ export function Testimonials() {
                 aria-label={`Go to slide ${idx + 1}`}
                 className={cn(
                   "w-2 h-2 rounded-full transition-colors",
-                  currentPage === idx ? "bg-blue-600" : "bg-slate-300 hover:bg-slate-400"
+                  displayPage === idx ? "bg-blue-600" : "bg-slate-300 hover:bg-slate-400"
                 )}
               />
             ))}

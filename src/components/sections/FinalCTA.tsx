@@ -24,7 +24,7 @@ export function FinalCTA() {
                 Want to Learn More About Our Training Solutions?
               </h2>
               <p className="text-blue-50 text-base md:text-lg font-medium">
-                Get Expert Guidance for Your Team's Success!
+                Get Expert Guidance for Your Team&apos;s Success!
               </p>
             </div>
           </div>

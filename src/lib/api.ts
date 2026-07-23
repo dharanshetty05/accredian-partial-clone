@@ -1,4 +1,6 @@
-import { Statistic, Testimonial, FAQCategory } from "@/types";
+import { Statistic, FAQCategory } from "@/types";
+import { statisticsData } from "@/lib/data/statistics";
+import { faqsData } from "@/lib/data/faqs";
 
 export function getBaseUrl() {
   if (typeof window !== "undefined") return ""; // Browser should use relative URL
@@ -7,17 +9,11 @@ export function getBaseUrl() {
 }
 
 export async function getStats(): Promise<Statistic[]> {
-  const res = await fetch(`${getBaseUrl()}/api/stats`, {
-    next: { revalidate: 3600 },
-  });
-  if (!res.ok) throw new Error("Failed to fetch statistics");
-  return res.json();
+  // Directly return the data source to avoid self-fetching on Vercel
+  return statisticsData;
 }
 
 export async function getFaqs(): Promise<FAQCategory[]> {
-  const res = await fetch(`${getBaseUrl()}/api/faqs`, {
-    next: { revalidate: 3600 },
-  });
-  if (!res.ok) throw new Error("Failed to fetch FAQs");
-  return res.json();
+  // Directly return the data source to avoid self-fetching on Vercel
+  return faqsData;
 }

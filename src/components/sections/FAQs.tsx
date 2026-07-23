@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
@@ -13,13 +13,9 @@ interface FAQsProps {
 }
 
 export function FAQs({ faqsData }: FAQsProps) {
-  const [activeCategory, setActiveCategory] = useState<string>("");
-
-  useEffect(() => {
-    if (faqsData && faqsData.length > 0 && !activeCategory) {
-      setActiveCategory(faqsData[0].category);
-    }
-  }, [faqsData, activeCategory]);
+  const [activeCategory, setActiveCategory] = useState<string>(
+    faqsData && faqsData.length > 0 ? faqsData[0].category : ""
+  );
   
   const currentCategoryData = faqsData?.find(c => c.category === activeCategory) || faqsData?.[0];
 

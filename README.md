@@ -126,7 +126,7 @@ Next.js Route Handlers are used to simulate backend endpoints for selected secti
 1.  **`/api/stats`:** Returns statistics data used in the "Track Record" section.
 2.  **`/api/faqs`:** Returns categorized frequently asked questions.
 
-The `src/lib/api.ts` file provides strongly typed fetch utilities (`getStats()`, `getFaqs()`) that the server components use to retrieve this data during rendering.
+src/lib/api.ts provides strongly typed data access utilities used by Server Components. The project also exposes mock API endpoints through Next.js Route Handlers (/api/stats and /api/faqs) to demonstrate API integration.
 
 ==========================================================
 
