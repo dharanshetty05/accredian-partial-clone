@@ -9,7 +9,9 @@ import { TailoredCourseSegmentation } from "@/components/sections/TailoredCourse
 import { StrategicSkillEnhancement } from "@/components/sections/StrategicSkillEnhancement";
 import { CATFramework } from "@/components/sections/CATFramework";
 import { HowItWorks } from "@/components/sections/HowItWorks";
+import { Testimonials } from "@/components/sections/Testimonials";
 import { FAQs } from "@/components/sections/FAQs";
+import { FinalCTA } from "@/components/sections/FinalCTA";
 
 export default function Home() {
   return (
@@ -24,6 +26,8 @@ export default function Home() {
       <CATFramework />
       <HowItWorks />
       <FAQs />
+      <Testimonials />
+      <FinalCTA />
     </main>
   );
 }
