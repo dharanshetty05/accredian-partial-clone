@@ -1,8 +1,8 @@
 import { NavigationItem } from "@/types";
 
 export const navigationData: NavigationItem[] = [
-  { label: "About Us", href: "#about" },
-  { label: "Programs", href: "#programs" },
-  { label: "Enterprise", href: "#enterprise" },
-  { label: "Universities", href: "#universities" },
+  { label: "Our Programs", href: "#programs" },
+  { label: "Enterprise Solutions", href: "#enterprise" },
+  { label: "Success Stories", href: "#testimonials" },
+  { label: "Resources", href: "#resources" },
 ];

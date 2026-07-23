@@ -1,7 +1,8 @@
 import { FAQ } from "@/types";
 
 export const faqsData: FAQ[] = [
-  { id: "faq1", question: "How long does a typical program last?", answer: "Most programs span between 3 to 6 months, requiring 5-8 hours of commitment per week." },
-  { id: "faq2", question: "Can the curriculum be customized for our enterprise?", answer: "Yes, we offer tailored solutions to align with your organization's specific tech stack and business objectives." },
-  { id: "faq3", question: "Are the instructors industry practitioners?", answer: "Absolutely. Our faculty consists of experienced professionals actively working in leading global tech companies." },
+  { id: "faq1", question: "How does enterprise training differ from individual learning programs?", answer: "Our enterprise solutions are fully customized to your business goals. We integrate your company's real-world data and case studies into the curriculum, and provide dedicated success managers to track cohort performance." },
+  { id: "faq2", question: "Can we measure the ROI of these upskilling initiatives?", answer: "Yes, we provide detailed analytics dashboards. You can track attendance, assessment scores, capstone project impact, and pre/post-program skill metrics to quantify the value of your investment." },
+  { id: "faq3", question: "Do you offer hybrid or on-premise delivery models?", answer: "Absolutely. We offer flexible delivery mechanisms including 100% online live sessions, self-paced modules, in-person workshops, or a blended approach tailored to your global workforce distribution." },
+  { id: "faq4", question: "Who delivers the training sessions?", answer: "Our faculty comprises active industry practitioners and leaders from top-tier technology and business firms, ensuring that the knowledge shared is practical, current, and highly actionable." },
 ];
