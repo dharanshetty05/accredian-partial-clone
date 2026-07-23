@@ -7,6 +7,7 @@ import { DomainExpertise } from "@/components/sections/DomainExpertise";
 import { CourseSegmentCard } from "@/components/ui/CourseSegmentCard";
 import { TailoredCourseSegmentation } from "@/components/sections/TailoredCourseSegmentation";
 import { StrategicSkillEnhancement } from "@/components/sections/StrategicSkillEnhancement";
+import { CATFramework } from "@/components/sections/CATFramework";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <DomainExpertise />
       <TailoredCourseSegmentation />
       <StrategicSkillEnhancement />
+      <CATFramework />
     </main>
   );
 }
