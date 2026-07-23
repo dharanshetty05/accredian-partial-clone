@@ -1,8 +1,47 @@
-import { FAQ } from "@/types";
+import { FAQCategory } from "@/types";
 
-export const faqsData: FAQ[] = [
-  { id: "faq1", question: "How does enterprise training differ from individual learning programs?", answer: "Our enterprise solutions are fully customized to your business goals. We integrate your company's real-world data and case studies into the curriculum, and provide dedicated success managers to track cohort performance." },
-  { id: "faq2", question: "Can we measure the ROI of these upskilling initiatives?", answer: "Yes, we provide detailed analytics dashboards. You can track attendance, assessment scores, capstone project impact, and pre/post-program skill metrics to quantify the value of your investment." },
-  { id: "faq3", question: "Do you offer hybrid or on-premise delivery models?", answer: "Absolutely. We offer flexible delivery mechanisms including 100% online live sessions, self-paced modules, in-person workshops, or a blended approach tailored to your global workforce distribution." },
-  { id: "faq4", question: "Who delivers the training sessions?", answer: "Our faculty comprises active industry practitioners and leaders from top-tier technology and business firms, ensuring that the knowledge shared is practical, current, and highly actionable." },
+export const faqsData: FAQCategory[] = [
+  {
+    category: "About the Course",
+    faqs: [
+      {
+        question: "What types of corporate training programs does Accredian offer?",
+        answer: "Accredian provides industry-specific, customizable training programs tailored to meet your organization's unique needs, covering domains like leadership, tech, data, and fintech."
+      },
+      {
+        question: "What domain specializations are available?",
+        answer: "We offer expertise in various domains, including Leadership Development, Tech & Data, Fintech, Digital Business, Product Innovation, Operations Management, and Generative AI."
+      }
+    ]
+  },
+  {
+    category: "About the Delivery",
+    faqs: [
+      {
+        question: "Can the courses be customized for specific industries or teams?",
+        answer: "Absolutely! Our programs are fully customizable, including content, format, timing, and industry-specific focus, to align with your organization’s goals."
+      },
+      {
+        question: "Who are these instructors for these programs?",
+        answer: "Our courses are delivered by industry leaders, experienced mentors, and domain experts with real-world insights."
+      },
+      {
+        question: "What formats are the programs delivered in?",
+        answer: "Programs can be delivered in various formats, including online, offline, hybrid, and on-demand, based on your team's preferences and requirements."
+      }
+    ]
+  },
+  {
+    category: "Miscellaneous",
+    faqs: [
+      {
+        question: "What is the ideal team size for corporate training?",
+        answer: "Our programs are flexible and can cater to teams of any size, from small groups to large organizational cohorts."
+      },
+      {
+        question: "How do we get started with Accredian?",
+        answer: "Get started with Accredian by contacting us or requesting a quote on our website. Our team will guide you through the process—from skill gap analysis to a custom program tailored to your needs."
+      }
+    ]
+  }
 ];

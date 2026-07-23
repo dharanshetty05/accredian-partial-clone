@@ -8,6 +8,8 @@ import { CourseSegmentCard } from "@/components/ui/CourseSegmentCard";
 import { TailoredCourseSegmentation } from "@/components/sections/TailoredCourseSegmentation";
 import { StrategicSkillEnhancement } from "@/components/sections/StrategicSkillEnhancement";
 import { CATFramework } from "@/components/sections/CATFramework";
+import { HowItWorks } from "@/components/sections/HowItWorks";
+import { FAQs } from "@/components/sections/FAQs";
 
 export default function Home() {
   return (
@@ -20,6 +22,8 @@ export default function Home() {
       <TailoredCourseSegmentation />
       <StrategicSkillEnhancement />
       <CATFramework />
+      <HowItWorks />
+      <FAQs />
     </main>
   );
 }
